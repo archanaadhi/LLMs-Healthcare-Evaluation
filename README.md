@@ -1,29 +1,57 @@
-# Comparative Evaluation of Large Language Models for Healthcare Applications
-## 📌 Project Overview
-This project aims to **evaluate the performance of Large Language Models (LLMs) in healthcare applications**. With the increasing adoption of AI in medicine, it is essential to ensure that LLM-generated responses are **accurate, complete, empathetic, and unbiased**.  
+# Advancing Medical LLMs: A Multi-Metric Evaluation Framework
 
-The project automates the evaluation process using well-defined metrics and structured methodologies. It assesses multiple LLMs (**LLaMA, DeepSeek, BERT**) on medical datasets and utilizes an **evaluation LLM (ChatGPT or Med-PaLM)** to analyze their responses.
+This repository presents a complete evaluation framework for benchmarking medical large language models (LLMs) across factual and human-aligned dimensions. The project evaluates real-world patient queries using a unified, end-to-end pipeline developed in a single script.
 
----
+## 🔍 Overview
 
-## 🎯 Objectives
-- **Data Collection & Processing**: Gather diverse **medical question-answer datasets**.
-- **Model Response Generation**: Use **LLaMA, DeepSeek, and BERT** to generate responses and other such LLMs depending on dataset requirements.
-- **Defining Evaluation Metrics**: Establish correctness, completeness, coherence, empathy, and bias detection methods.
-- **Automated Response Assessment**: Train an evaluation model to compare and analyze responses.
-- **Optimization via RAG**: Enhance responses by integrating **retrieved medical literature**.
-- **Deployment & Continuous Monitoring**: Build an API-based evaluation system.
+We introduce a retrieval-grounded, multi-metric evaluation method for assessing LLMs in healthcare applications. The framework scores model responses on six key dimensions:
 
----
+- **Correctness**
+- **Hallucination Resistance**
+- **Completeness**
+- **Faithfulness**
+- **Groundedness**
+- **Empathy**
 
-## 🔹 Prerequisites
-Ensure you have the following installed:
-- **Python 3.8+**
-- **pip** (Python package manager)
-- **Git**
-- **Hugging Face `transformers` library**
-- **PyTorch or TensorFlow**
-- **NLTK & SciSpacy** (for NLP preprocessing)
+The evaluation is applied to responses from three commercial models:
+- ChatGPT (GPT-3.5-turbo)
+- Claude (Anthropic)
+- DeepSeek
+
+  ## 🎯 Objectives
+
+- Evaluate commercial LLMs on real-world medical queries using a reproducible pipeline.
+- Benchmark models across six critical axes: correctness, hallucination, completeness, faithfulness, groundedness, and empathy.
+- Enable retrieval-augmented, document-grounded evaluation using real biomedical literature.
+- Provide insights into model behavior trade-offs in factual vs. empathetic response quality.
+
+## 📦 Prerequisites
+
+Before running the pipeline, make sure you have:
+
+- Python 3.8+
+- API keys for:
+  - OpenAI (GPT-3.5-turbo or GPT-4 for gold doc synthesis)
+  - Anthropic Claude
+  - DeepSeek
+- Basic familiarity with:
+  - Jupyter Notebooks or Python scripting
+  - LangChain and OpenAI API
+  - PubMed/EuropePMC for biomedical document retrieval
+
+
+## ⚙️ How It Works
+
+All logic is contained in a single Python file / Jupyter notebook, which performs:
+
+- Prompt-based LLM querying using LangChain
+- PubMed/EuropePMC biomedical document retrieval
+- Embedding and FAISS-based relevance scoring
+- Pseudo-gold document synthesis via GPT-4
+- Prompt-based evaluation across six metrics
+- Visualization of results (bar plots, radar charts, trade-off plots)
+
+
 
 ---
 
