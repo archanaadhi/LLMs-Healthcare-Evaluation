@@ -37,13 +37,18 @@ This project introduces a comprehensive evaluation strategy to assess medical LL
 Before running the pipeline, make sure you have:
 
 - Python 3.8+
-- Jupyter Notebook
-- API access to:
-  - 🔑 OpenAI (for GPT-3.5-turbo or GPT-4)
-  - 🔑 Claude (Anthropic API)
-  - 🔑 DeepSeek V3
-
-> 💡 **Note**: Each LLM requires individual API keys tied to your personal email/account. Keys must be manually configured in the code or via environment variables.
+- Personal email ID registered with:
+  - OpenAI
+  - Anthropic Claude
+  - DeepSeek
+- Active API keys for:
+  - OpenAI (for GPT-3.5-turbo or GPT-4 gold synthesis)
+  - Anthropic Claude (Claude 3 Opus)
+  - DeepSeek V3
+- Basic familiarity with:
+  - Jupyter Notebooks or Python scripting
+  - LangChain and OpenAI API
+  - PubMed/EuropePMC for biomedical document retrieval
 
 - Installed Python packages:
   - `openai`, `langchain`, `faiss-cpu`, `pandas`, `matplotlib`, `seaborn`, `biopython`
@@ -51,6 +56,7 @@ Before running the pipeline, make sure you have:
 ---
 
 ## ⚙️ How It Works
+> 💡 **Note**: Each LLM requires individual API keys tied to your personal email/account. Keys must be manually configured in the code or via environment variables.
 
 All logic is implemented in a single Jupyter notebook:
 
@@ -93,14 +99,15 @@ LLMs-Healthcare-Evaluation/
 ├── Trials/                                   # 🧪 Prior metric experiments
 │   ├── Accuracy/                             # 🔍 Accuracy trials
 │   ├── Empathy/                              # 💬 Empathy evaluation tests
-│   └── data.csv                              # 🧾 Metric score logs
+│   └── data.csv                              # 🧾 Input
 │
 └── .git/                                     # 🌱 Git version control
 
+```
 ---
 ## 🧪 Results
 
-We evaluated **ChatGPT**, **Claude**, and **DeepSeek** across six key metrics using our multi-metric evaluation framework on real-world patient queries.
+We evaluated ChatGPT, Claude, and DeepSeek across six key metrics using our multi-metric evaluation framework.
 
 ### 📊 Metric-Wise Model Ranking (Higher is Better)
 
@@ -113,14 +120,16 @@ We evaluated **ChatGPT**, **Claude**, and **DeepSeek** across six key metrics us
 | Groundedness     | Claude (6.32)            | DeepSeek (6.32)            | ChatGPT (6.07)             |
 | Empathy          | DeepSeek (8.82)          | ChatGPT (8.32)             | Claude (7.32)              |
 
-> 🔍 **Key Insights**  
-> - 🥇 **DeepSeek** consistently leads in factual reliability and emotional alignment.  
-> - 🔗 **Claude** excels in groundedness and delivers stable performance overall.  
-> - 💬 **ChatGPT** demonstrates high empathy and competitive completeness, with fluent outputs.
+> 🔍 **Key Insights**:  
+> - **DeepSeek** outperformed on factual metrics like correctness, hallucination, and completeness.  
+> - **Claude** led on groundedness and was consistent across metrics.  
+> - **ChatGPT** demonstrated strong empathy and competitive completeness.
 
 ---
 
-## Team Members
-* Archana Adhi
-* Havanitha Macha
-* Shravan Busireddy
+## 👥 Team Members
+
+- Archana Adhi  
+- Havanitha Macha  
+- Shravan Busireddy
+
