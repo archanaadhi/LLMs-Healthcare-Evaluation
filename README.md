@@ -86,6 +86,9 @@ All logic is implemented in a single Jupyter notebook:
 
 ---
 
+
+---
+
 ## 🗂️ Project Structure
 
 ```bash
@@ -94,6 +97,7 @@ LLMs-Healthcare-Evaluation/
 ├── MedicalLLM_Evaluation_Pipeline.ipynb      # 🔧 End-to-end pipeline
 ├── Results_Visualizer.ipynb                  # 📊 Metrics visualization
 ├── capstone_results.csv                      # 📁 Final metric scores
+├── sample_responses.csv                      # 🧾 Input queries for evaluation
 ├── README.md                                 # 📄 Project overview and instructions
 │
 ├── Trials/                                   # 🧪 Prior metric experiments
@@ -102,6 +106,7 @@ LLMs-Healthcare-Evaluation/
 │   └── data.csv                              # 🧾 Input
 │
 └── .git/                                     # 🌱 Git version control
+
 
 ```
 ---
