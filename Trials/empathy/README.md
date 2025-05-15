@@ -2,8 +2,8 @@
 
 ### ✅ Techniques That Worked
 
-**1. Few-Shot Prompting with GPT-3.5 (OpenAI API)**  
-- **What we did:** Prompted GPT-3.5 with labeled examples to rate empathy (1–10).  
+**1. Few-Shot Prompting with GPT-Turbo (OpenAI API)**  
+- **What we did:** Prompted GPT-Turbo with labeled examples to rate empathy (1–10).  
 - **Why it worked:** Clean, consistent prompts led to reliable scores.  
 - **Best for:** Small to medium-scale evaluations with well-tuned prompts.  
 - ⚠️ **Limitation:** Ran into API quota limits during extended runs.
